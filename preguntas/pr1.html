@@ -1,0 +1,80 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona la traducción correcta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-bottom: 20px;
+        }
+        .options input {
+            margin: 10px;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selecciona la traducción correcta</h1>
+
+    <div class="question">Lugar de destino?</div>
+
+    <div class="options">
+
+        <input type="radio" name="option" value="Naturales" id="Naturales">
+        <label for="Naturales">Naturales</Parques><br>
+
+        <input type="radio" name="option" value="Comida" id="Comida">
+        <label for="Comida">different</label><br>
+
+        <input type="radio" name="option" value="Familiar" id="Familiar">
+        <label for="Familiar">Familiar</label><br>
+
+        <input type="radio" name="option" value="Nocturno" id="Nocturno">
+        <label for="Nocturno">Nocturno</label><br>
+
+        <input type="radio" name="Cultural" value="Cultural" id="Cultural">
+        <label for="Cultural">Cultural</label><br>
+
+
+    </div>
+
+    <button onclick="comprobarRespuesta()">Comprobar</button>
+
+    <div id="result"></div>
+
+    <script>
+        function comprobarRespuesta() {
+            const opciones = document.getElementsByName('option');
+            let seleccion = '';
+            for (const opcion of opciones) {
+                if (opcion.checked) {
+                    seleccion = opcion.value;
+                    break;
+                }
+            }
+
+            const resultado = document.getElementById('result');
+            if (seleccion === 'hundred') {
+                resultado.textContent = '¡Correcto!';
+                resultado.style.color = 'green';
+            } else {
+                resultado.textContent = 'Incorrecto, la respuesta correcta es "hundred".';
+                resultado.style.color = 'red';
+            }
+        }
+    </script>
+
+</body>
+</html>

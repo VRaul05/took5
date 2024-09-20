@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackabus UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: rgb(255,207,8);
+            background: linear-gradient(90deg, rgba(255,207,8,1) 0%, rgba(30,170,249,1) 100%);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.2em;
+            margin: 0;
+            margin-left: 60px;
+        }
+
+        .saldo {
+            background-color: #e0e0e0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .saldo p {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .saldo button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 15px;
+        }
+
+        .actions div {
+            text-align: center;
+            flex: 1 1 45%; /* Makes the items responsive */
+            margin: 5px;
+        }
+
+        .actions div img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .actions div p {
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        .avisos {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .avisos h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .avisos .aviso-item {
+            display: inline-block;
+            width: 120px;
+            height: 100px;
+            background-color: #e0e0e0;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .avisos .aviso-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        .avisos .aviso-item p {
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 500px) {
+            .header h2 {
+                font-size: 1em;
+                margin-left: 40px;
+            }
+
+            .saldo p {
+                font-size: 1.5em;
+            }
+
+            .saldo button {
+                font-size: 0.8em;
+                padding: 8px 16px;
+            }
+
+            .avisos .aviso-item {
+                width: 80px; /* Make items smaller on small screens */
+                height: auto; /* Allow height to adjust */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="https://via.placeholder.com/50" alt="User">
+            <h2>Nombre del usuario</h2>
+        </div>
+
+        <!-- Saldo -->
+        <div class="saldo">
+            <p>     </p>
+            <button><a href="mitad.html"> Viaje</a></button>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+            <div>
+                <img src="https://via.placeholder.com/30" alt="Historial">
+                <p>Historial</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/30" alt="Viaje">
+                <p>Viaje</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/30" alt="Pagar">
+                <p>Mis reseñas</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/30" alt="Pedir">
+                <p>Pedir Tarjeta</p>
+            </div>
+        </div>
+
+        <!-- Avisos -->
+        <div class="avisos">
+            <h3>Rutas</h3>
+            <div class="aviso-item">
+                <img src="https://via.placeholder.com/50" alt="Aviso 1">
+                <p>Título</p>
+            </div>
+            <div class="aviso-item">
+                <img src="https://via.placeholder.com/50" alt="Aviso 2">
+                <p>Título</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

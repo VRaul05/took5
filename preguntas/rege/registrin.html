@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        /* Estilo general del body para centrar el formulario */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9fefd; /* Fondo blanco suave */
+            font-family: "Playwrite DE Grund", system-ui;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: #1eaaf9; /* Azul */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            color: #f9fefd; /* Color de texto blanco */
+        }
+
+        .container header {
+            font-size: 1.8rem;
+            color: #ffcf08; /* Amarillo */
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .container .form {
+            margin-top: 20px;
+        }
+
+        .form .input-box {
+            width: 87%;
+            margin-top: 15px;
+        }
+
+        .input-box label {
+            color: #f9fefd; /* Texto blanco */
+        }
+
+        .form :where(.input-box input, .select-box) {
+            height: 40px;
+            width: 100%;
+            outline: none;
+            font-size: 0.9rem; /* Tamaño de fuente reducido para mantener los placeholders dentro */
+            color: #122433; /* Texto negro */
+            margin-top: 5px;
+            border: 2px solid #ffcf08; /* Borde amarillo */
+            border-radius: 8px;
+            padding: 0 10px; /* Ajuste de padding */
+            background: #f9fefd; /* Fondo blanco */
+            transition: border-color 0.3s ease;
+            text-overflow: ellipsis; /* Evita que el texto se salga del campo */
+        }
+
+        ::placeholder {
+            color: #808080;
+        }
+
+        .input-box input:focus {
+            border-color: #1eaaf9; /* Borde cambia a azul cuando se enfoca */
+            box-shadow: 0 2px 5px rgba(30, 170, 249, 0.5);
+        }
+
+        .form .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form .gender-box {
+            margin-top: 15px;
+        }
+
+        .form :where(.gender-option, .gender) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .form .gender {
+            display: flex;
+            align-items: center;
+        }
+
+        .gender input {
+            accent-color: #ffcf08; /* Amarillo */
+        }
+
+        .form :where(.gender input, .gender label) {
+            cursor: pointer;
+        }
+
+        .gender label {
+            color: #f9fefd; /* Blanco */
+        }
+
+        .address :where(input, .select-box) {
+            margin-top: 15px;
+        }
+
+        .select-box select {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            color: #122433; /* Texto negro */
+            font-size: 0.9rem; /* Tamaño de fuente reducido para coherencia */
+            background: #f9fefd; /* Fondo blanco */
+        }
+
+        .form button {
+            height: 45px;
+            width: 100%;
+            color: #f9fefd; /* Blanco */
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #7d6505; /* Amarillo */
+            box-shadow: 0 4px 8px rgba(255, 207, 8, 0.4);
+        }
+
+        .form button:hover {
+            background: #e0b107;
+            box-shadow: 0 6px 12px rgba(255, 207, 8, 0.5);
+        }
+
+        /* Responsivo para móviles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .form .column {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .form .gender-option {
+                column-gap: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="container">
+  <header>Registro</header>
+  <form class="form" action="#">
+      <div class="input-box">
+          <label>Full Name</label>
+          <input required="" placeholder="Ingresa nombre completo" type="text">
+      </div>
+      <div class="column">
+          <div class="input-box">
+            <label>Correo Electrónico</label>
+            <input required="" placeholder="Ingresa tu correo" type="email">
+          </div>
+          <div class="input-box">
+            <label>Fecha de nacimiento</label>
+            <input required="" placeholder="Ingresa tu fecha de nacimiento" type="date">
+          </div>
+      </div>
+      <div class="gender-box">
+        <label>Género</label>
+        <div class="gender-option">
+          <div class="gender">
+            <input checked="" name="gender" id="check-male" type="radio">
+            <label for="check-male">Masculino</label>
+          </div>
+          <div class="gender">
+            <input name="gender" id="check-female" type="radio">
+            <label for="check-female">Femenino</label>
+          </div>
+          <div class="gender">
+            <input name="gender" id="check-other" type="radio">
+            <label for="check-other">Prefiero no decirlo</label>
+          </div>
+        </div>
+      </div>
+      <div class="input-box address">
+        <label>Seguridad</label>
+        <input required="" placeholder="Ingresa tu contraseña" type="password">
+        <div class="column">
+          <div class="select-box">
+            <select>
+              <option hidden="">Ciudad</option>
+              <option>Durango</option>
+              <option>Otra Ciudad</option>
+            </select>
+          </div>
+        <input required="" placeholder="Código Postal" type="text">
+        </div>
+      </div>
+     <a href="../../Miperfil.html" <button type="submit" >Enviar</button></a>
+  </form>
+</section>
+
+</body>
+</html>

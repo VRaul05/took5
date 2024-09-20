@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo cuestionario</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            width: 80%;
+            height: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .progress-bar div {
+            height: 100%;
+            width: 66%;
+            background: rgb(255,207,8);
+            background: linear-gradient(90deg, rgba(255,207,8,1) 0%, rgba(30,170,249,1) 100%);
+            border-radius: 5px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .options label {
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .options input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .check-btn {
+            margin-top: 20px;
+            padding: 10px 0;
+            width: 100%;
+            background-color: #dcdcdc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+
+        .character {
+            font-size: 40px;
+        }
+
+        .speech-bubble {
+            margin-top: 10px;
+            font-size: 24px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        /* Media Queries para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .progress-bar {
+                width: 100%;
+            }
+
+            .question {
+                font-size: 16px;
+            }
+
+            .options label {
+                font-size: 14px;
+            }
+
+            .check-btn {
+                font-size: 14px;
+                padding: 8px 0;
+            }
+
+            .speech-bubble {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                max-width: 95%;
+            }
+
+            .question {
+                font-size: 14px;
+            }
+
+            .speech-bubble {
+                font-size: 18px;
+                padding: 5px 10px;
+            }
+
+            .character {
+                font-size: 35px;
+            }
+
+            .options label {
+                font-size: 12px;
+            }
+
+            .check-btn {
+                font-size: 12px;
+                padding: 6px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <div></div>
+        </div>
+        <div class="speech-bubble">Tipo de acompañantes</div>
+        <p class="question">Selecciona el que prefieras</p>
+        <div class="options">
+            <label><input type="checkbox" name="familia"> Familia</label>
+            <label><input type="checkbox" name="pareja"> Pareja</label>
+            <label><input type="checkbox" name="solo"> Solo</label>
+            <label><input type="checkbox" name="amigos"> Amigos</label>
+            <label><input type="checkbox" name="ninos"> Niños</label>
+            <label><input type="checkbox" name="ado"> Adolecentes</label>
+            
+            <button>Siguiente! (2/3)</button>
+    </div>
+</body>
+</html>

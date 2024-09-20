@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página divida</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .section {
+            width: 48%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            accent-color: #ffcf08; /* Amarillo */
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        .section button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color:#1eaaf9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            accent-color: #ffcf08; /* Amarillo */
+        }
+        .section button:hover {
+            background-color: #1eaaf9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Primera sección -->
+        <div class="section">
+            <img src="imgrg/tour.jpg" alt="Imagen 1">
+            <h2>Personalizada</h2>
+            <p>Recibe una ruta adaptada a tu gusto.</p>
+            <a href="preguntas/index.html"<button>Vamos!</button></a>
+        </div>
+
+        <!-- Segunda sección -->
+        <div class="section">
+            <img src="imgrg/caac.png" alt="Imagen 2">
+            <h2>Predefinida</h2>
+            <p>Explora las rutas que han encantado a todo el mundo.</p>
+            <a href="MiRuta.html"<button>Vamos!</button></a>
+        </div>
+    </div>
+
+</body>
+</html>
